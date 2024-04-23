@@ -62,8 +62,8 @@ X_train_makanan, X_test_makanan, y_train_makanan, y_test_makanan = load_and_prep
 tfidf_vectorizer_makanan, nb_model_makanan = train_model(X_train_makanan, y_train_makanan)
 
 # Load and preprocess data for the second feature (Rekomendasi Olahraga)
-train_url_olahraga = "https://raw.githubusercontent.com/sanfla/Project/main/TugasAILab/olahraga_training%20-%20Sheet1.csv"
-validation_url_olahraga = "https://raw.githubusercontent.com/sanfla/Project/main/TugasAILab/olahraga_validation%20-%20Sheet1.csv"
+train_url_olahraga = "https://raw.githubusercontent.com/sanfla/Project/main/TugasAILab/Dataset/olahraga_training%20-%20Sheet1%20(1).csv"
+validation_url_olahraga = "https://raw.githubusercontent.com/sanfla/Project/main/TugasAILab/Dataset/olahraga_validation%20-%20Sheet1%20(1).csv"
 X_train_olahraga, X_test_olahraga, y_train_olahraga, y_test_olahraga = load_and_preprocess_data(train_url_olahraga, validation_url_olahraga)
 tfidf_vectorizer_olahraga, nb_model_olahraga = train_model(X_train_olahraga, y_train_olahraga)
 
@@ -75,7 +75,7 @@ tfidf_vectorizer_larangan, nb_model_larangan = train_model(X_train_larangan, y_t
 
 # Load response data from all features
 df_makanan_response = pd.read_excel("https://docs.google.com/spreadsheets/d/1WIHxAdAIhbcamQH0bBQ8eF6Pv2OD32tvS9bnAFqtgC4/export?format=xlsx")
-df_olahraga_response = pd.read_csv("https://raw.githubusercontent.com/sanfla/Project/main/TugasAILab/response_olahraga%20-%20Sheet1%20(1).csv")
+df_olahraga_response = pd.read_csv("https://raw.githubusercontent.com/sanfla/Project/main/TugasAILab/Dataset/response_olahraga%20-%20Sheet1%20(2).csv")
 df_larangan_response = pd.read_excel("https://docs.google.com/spreadsheets/d/1BWlFGTsygh5mAemIeZKIGUG1THbt-5d5pE5XB6rtv-w/export?format=xlsx")
 
 # Streamlit app
